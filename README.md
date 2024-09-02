@@ -21,27 +21,35 @@ cd default_nodejs
 npm install
 ```
 
-5. Configure as variáveis de ambiente editando o arquivo .env.example para .env.
+5. Copie o arquivo `.env.example` para `.env` e configure suas variáveis de ambiente conforme necessário:
+    
+    `cp .env.example .env` 
+    
+    Em sistemas Windows, você pode usar:
+    
+    `copy .env.example .env` 
 
-6. Execute a imagem do banco com docker.
+6. Configure as variáveis de ambiente editando o arquivo .env.example para .env.
+
+7. Execute a imagem do banco com docker.
 
 ```
 docker compose up -d
 ```
 
-7. Execute o comando prisma para criar as tabelas do banco.
+8. Execute o comando prisma para criar as tabelas do banco.
 
 ```
 npx prisma db push
 ```
 
-8. Execute o comando prisma para gerar os seeds.
+9. Execute o comando prisma para gerar os seeds.
 
 ```
 npx prisma db seed
 ```
 
-8. Execute o projeto.
+10. Execute o projeto.
 
 ```
 npm start
